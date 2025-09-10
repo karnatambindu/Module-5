@@ -1,48 +1,39 @@
-# Exp.No:24  
-## Multi-level Inheritance
+# Exp.No:5D Multiple Inheritance
+# AIM
+To write a Python program using multiple inheritance to get a student’s name, attendance, and ID (grade), and determine if the student is eligible for placement based on their grade.
 
----
+# ALGORITHM
+1. Start the program.
+2. Define class A: In the constructor init(),
+3. accept input for: n: Student's name a: Student's attendance i: Student's ID (grade) Define class B inheriting from A: Define disp1() to print the name and attendance. Define class C inheriting from A: Define disp2() to check if grade (i) is greater than 90: If yes, print “Eligible for Placement”.
+4. Else, print “Not Eligible for Placement”.
+5.  Define class D that inherits from both B and C (multiple inheritance).
+6.  Create an object o of class D. Call disp1() to display name and attendance. Call disp2() to check placement eligibility.
+7.  End the program.
 
-### AIM  
-To write a Python program to get the name, age, and ID of a person and display them using multilevel inheritance.
-
----
-
-### ALGORITHM
-
-1. Define the `Person` class:
-   - Inside the `Person` class, define the `__init__` method (constructor) with two parameters: `name` and `age`.
-   - Inside the `__init__` method, assign the `name` to `self.name` and `age` to `self.age`.
-
-2. Define the `PersonDetails` class that inherits from the `Person` class:
-   - Inside the `PersonDetails` class, define the `__init__` method (constructor) with three parameters: `name`, `age`, and `person_id`.
-   - Inside the `__init__` method, call the `__init__` method of the `Person` class using `super()` to initialize `name` and `age`.
-   - Assign `person_id` to `self.person_id`.
-
-3. Define the `DisplayDetails` class that inherits from the `PersonDetails` class:
-   - Inside the `DisplayDetails` class, define the `__init__` method (constructor) with three parameters: `name`, `age`, and `person_id`.
-   - Inside the `__init__` method, call the `__init__` method of the `PersonDetails` class using `super()` to initialize `name`, `age`, and `person_id`.
-
-4. Inside the `DisplayDetails` class, define the `show_details` method:
-   - Inside the `show_details` method, return a formatted string with `self.name`, `self.age`, and `self.person_id`.
-
-5. Prompt the user to enter `name` (string), `age` (integer), and `person_id` (integer).
-
-6. Create an instance `person` of the `DisplayDetails` class, passing `name`, `age`, and `person_id` to the constructor.
-
-7. Call the `show_details` method on the `person` object and print the result.
-
-8. Terminate the program.
-
----
-
-### PROGRAM
-
+# PROGRAM
 ```
+class student:
+    def __init__(self,name,id,mark):
+        self.name=name
+        self.id=id
+        self.mark=mark
+    def veiw(self):
+        print(self.name)
+        print(self.id)
 
-
+id=input()
+name=input()
+mark=int(input())
+s=student(id,name,mark)
+s.veiw ()
+if mark>=75:
+    print("Eligible for Exam")
+else:
+    print("Not Eligible for Exam")
 ```
+# OUTPUT
+<img width="1177" height="343" alt="image" src="https://github.com/user-attachments/assets/ee196dad-6858-423e-b9b0-8afd499d24ea" />
 
-### OUTPUT
-
-### RESULT
+# RESULT
+Thus the python program was initiated and executed successfully.
