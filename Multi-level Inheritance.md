@@ -1,39 +1,39 @@
-# Exp.No:5D Multiple Inheritance
+# Exp.No:25 Multi-level Inheritance
 # AIM
-To write a Python program using multiple inheritance to get a student’s name, attendance, and ID (grade), and determine if the student is eligible for placement based on their grade.
+To write a Python program that collects a person's name, age, and salary, and displays them using multilevel inheritance in object-oriented programming.
 
 # ALGORITHM
 1. Start the program.
-2. Define class A: In the constructor init(),
-3. accept input for: n: Student's name a: Student's attendance i: Student's ID (grade) Define class B inheriting from A: Define disp1() to print the name and attendance. Define class C inheriting from A: Define disp2() to check if grade (i) is greater than 90: If yes, print “Eligible for Placement”.
-4. Else, print “Not Eligible for Placement”.
-5.  Define class D that inherits from both B and C (multiple inheritance).
-6.  Create an object o of class D. Call disp1() to display name and attendance. Call disp2() to check placement eligibility.
-7.  End the program.
+2. Define class a (base class): In the constructor init(), get input for: x → Name (string) a → Age (integer) b → Salary (integer) Define class b inheriting from a: Define dis1() to return name.
+3. Define class c inheriting from a: Define dis2() to return age.
+4. Define class d inheriting from a: Define dis3() to return salary.
+5. Define class e inheriting from b, c, and d: Use pass since it inherits everything needed. Create an object y of class e. Print the outputs from dis1(), dis2(), and dis3().
+6. End the program.
 
 # PROGRAM
+Reg-212223060113 Name-Karnatam Bindu
 ```
-class student:
-    def __init__(self,name,id,mark):
-        self.name=name
-        self.id=id
-        self.mark=mark
-    def veiw(self):
-        print(self.name)
-        print(self.id)
-
-id=input()
-name=input()
-mark=int(input())
-s=student(id,name,mark)
-s.veiw ()
-if mark>=75:
-    print("Eligible for Exam")
-else:
-    print("Not Eligible for Exam")
+class a:
+def init(self):
+self.x=input()
+self.a=int(input())
+self.b=int(input())
+class b(a):
+def dis1(self):
+return self.x
+class c(a):
+def dis2(self):
+return self.a
+class d(a):
+def dis3(self):
+return self.b
+class e(b,c,d):
+pass
+y=e()
+print(y.dis1() ,y.dis2() ,y.dis3())
 ```
 # OUTPUT
-<img width="1177" height="343" alt="image" src="https://github.com/user-attachments/assets/ee196dad-6858-423e-b9b0-8afd499d24ea" />
+<img width="947" height="292" alt="image" src="https://github.com/user-attachments/assets/c63b86c4-aad2-4c4e-878f-ebcd74423138" />
 
-# RESULT
-Thus the python program was initiated and executed successfully.
+# RESULT 
+Thus the python program was initiated and implemented successfully.
