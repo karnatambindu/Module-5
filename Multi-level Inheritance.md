@@ -1,4 +1,4 @@
-# Exp.No:25 Multi-level Inheritance
+# Exp.No:5D Multi-level Inheritance
 # AIM
 To write a Python program that collects a person's name, age, and salary, and displays them using multilevel inheritance in object-oriented programming.
 
